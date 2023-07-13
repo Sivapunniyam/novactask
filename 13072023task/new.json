@@ -1,0 +1,56 @@
+[
+    {
+        "name": "raj",
+        "email": "raj@gmail.com",
+        "age": "23",
+        "salary": "8000"
+    },
+    {
+        "name": "karthik",
+        "email": "karthik@gm.com",
+        "age": "25",
+        "salary": "20000"
+    },
+    {
+        "name": "guna",
+        "email": "guna.gm.co",
+        "age": "22",
+        "salary": "23000"
+    },
+    {
+        "name": "aravind",
+        "email": "aravin.co.in",
+        "age": "26",
+        "salary": "24000"
+    },
+    {
+        "name": "moni",
+        "email": "moni.gm.co",
+        "age": "29",
+        "salary": "22000"
+    },
+    {
+        "name": "ram",
+        "email": "ram@gm.co",
+        "age": "30",
+        "salary": "25000"
+    },
+    {
+        "name": "vinoth",
+        "email": "vinoth@gm.co",
+        "age": "34",
+        "salary": "24000"
+    },
+    {
+        "name": "ragu",
+        "email": "ragu@gm.co",
+        "age": "26",
+        "salary": "20000"
+    },
+    {
+        "name": "akash",
+        "email": "akash@.co",
+        "age": "25",
+        "salary": "25000"
+    }
+]
