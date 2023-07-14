@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html>
     <body>
-        <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <form action="" method="POST" enctype="multipart/form-data">
             <input type="file" name="image" accept="image/*" />
             <button type="submit">Uload</button>
         </form>

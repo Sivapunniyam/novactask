@@ -1,20 +1,23 @@
+
 <?php
+$allow = array("jpg", "jpeg", "gif", "png");
 
-// Get reference to uploaded image
-$image_file = $_FILES["image"];
-echo('-009iy8ij');
+$todir = 'uploads/';
 
-// Image not defined, let's exit
-if (!isset($image_file)) {
-    die('No file uploaded.');
+if ( !!$_FILES['file']['tmp_name'] ) // is the file uploaded yet?
+{
+    $info = explode('.', strtolower( $_FILES['file']['name']) ); // whats the extension of the file
+
+    if ( in_array( end($info), $allow) ) // is this file allowed
+    {
+        if ( move_uploaded_file( $_FILES['file']['tmp_name'], $todir . basename($_FILES['file']['name'] ) ) )
+        {
+            // the file has been moved correctly
+        }
+    }
+    else
+    {
+        // error this file ext is not allowed
+    }
 }
-
-// Move the temp image file to the images/ directory
-move_uploaded_file(
-    // Temp image location
-    $image_file["tmp_name"],
-
-    // New image location, __DIR__ is the location of the current PHP file
-    __DIR__ . "/images/" . $image_file["name"]
-);
 ?>
