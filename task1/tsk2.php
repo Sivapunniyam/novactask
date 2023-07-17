@@ -3,6 +3,6 @@ using ternary operator. -->
 <?php
 // $number=(string)readline('Enter Your Name: ');
 $number = fgets(STDIN );
-$output = ($number > 30) ? "30" : ($number > 20)  ? "20" :($number >10) ? "10" : 'Defaut';
+$output = ($number > 30) ? "30" : ($number > 20)  ? "20" :($number >10) ? "10" : 'Less Than 10';
 echo "Given number is greater than ". $output;
 ?>
