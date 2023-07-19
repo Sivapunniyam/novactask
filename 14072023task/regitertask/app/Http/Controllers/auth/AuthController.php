@@ -41,7 +41,7 @@ class AuthController extends Controller
             return redirect()->intended('dashboard')
                 ->withSuccess('You have Successfully loggedin');
         }
-        return redirect("login")->withSuccess('Opps! You have entered invalid credentials');
+        return redirect("")->withSuccess('Opps! You have entered invalid credentials');
      }
     /**
      * Write code on Method
@@ -51,7 +51,7 @@ class AuthController extends Controller
     public function postRegistration(Request $request)
     {  
         $request->validate([
-            'name' => 'required',
+            'fname' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
         ]);
@@ -59,7 +59,6 @@ class AuthController extends Controller
         $check = $this->create($data);
         return redirect("dashboard")->withSuccess('Great! You have Successfully loggedin');
     }
-
     /**
      * Write code on Method
      *
@@ -71,7 +70,7 @@ class AuthController extends Controller
         if(Auth::check()){
             return view('dashboard');
         }
-        return redirect("login")->withSuccess('Opps! You do not have access');
+        return redirect("")->withSuccess('Opps! You do not have access');
     }
 
     /**
@@ -83,7 +82,7 @@ class AuthController extends Controller
     public function create(array $data)
     {
       return User::create([
-        'name' => $data['name'],
+        'fname' => $data['fname'],
         'email' => $data['email'],
         'password' => Hash::make($data['password'])
       ]);
@@ -97,7 +96,7 @@ class AuthController extends Controller
     public function logout() {
         Session::flush();
         Auth::logout();
-        return Redirect('login');
+        return Redirect('');
 
     }
 
